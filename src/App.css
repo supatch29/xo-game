@@ -1,5 +1,44 @@
+
+body{
+  background-color: #333;
+}
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lucida Console", Monaco, monospace;
+}
 .App {
   text-align: center;
+}
+.icon {
+  padding: 10px;
+  background: #EBB500;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.card button{
+  background-color: #EBB500 !important;
+  width: 50%;
+}
+.card{
+  padding: 24px 32px!important;
+  text-align: center;
+  background-color: #fff ;
+  border-radius: 10px;
+}
+.button-login{
+  color: #fff !important;
+  background-color: #EBB500 !important;
+  border-radius: 10px;
+}
+.card-login {
+  text-align: center;
+  padding: 25%;
 }
 
 .App-logo {
@@ -34,5 +73,56 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.game {
+  text-align: center;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px;
+  max-width: 400px;
+  margin: 20px auto; 
+}
+
+.cell {
+  width: 100%; 
+  padding: 50%; 
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+h2 {
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .board {
+    max-width: 300px; 
+  }
+
+  .cell {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .board {
+    max-width: 500px; 
+  }
+
+  .cell {
+    font-size: 28px;
   }
 }
