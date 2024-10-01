@@ -103,7 +103,7 @@ const App = () => {
 
         setIsXTurn(true); // สลับกลับให้เป็นเทิร์นของผู้เล่น X
       }
-    }, 500); // ตั้งดีเลย์เล็กน้อยเพื่อให้ดูเหมือน AI กำลังคิด
+    }, 500);
   };
 
   const restartGame = () => {
@@ -111,12 +111,10 @@ const App = () => {
     setIsXTurn(true); // รีเซ็ตให้เทิร์นเริ่มต้นเป็นของ X
   };
 
-  const navigate = useNavigate(); // ต้องประกาศ `useNavigate` ภายในคอมโพเนนต์
+  const navigate = useNavigate(); 
   const handleLogout = () => {
     // ลบ Token ออกจาก Local Storage
     localStorage.removeItem("token");
-
-    // นำผู้ใช้กลับไปยังหน้าแรก (หรือหน้า login)
     navigate("/");
   };
 

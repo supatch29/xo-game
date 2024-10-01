@@ -15,7 +15,6 @@ function LoginPage() {
   const handleSuccess = (response) => {
     console.log("เข้าสู่ระบบสำเร็จ:", response);
     handleClickGoPage()
-    // คุณจะได้รับ tokenId ที่สามารถใช้ในการตรวจสอบผู้ใช้ใน backend
   };
 
   const handleFailure = (error) => {
